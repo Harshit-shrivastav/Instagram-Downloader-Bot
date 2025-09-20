@@ -1,5 +1,4 @@
-telethon
-instaloader
-requests
-redis
-python-dotenv
+aiogram==3.1.1
+aiofiles
+httpx
+aiosqlite
