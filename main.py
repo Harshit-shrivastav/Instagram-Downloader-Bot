@@ -11,6 +11,9 @@ from aiogram.types import Message, BufferedInputFile
 from aiogram.filters import CommandStart, Command
 from aiogram.enums.parse_mode import ParseMode
 
+from dotenv import load_dotenv
+load_dotenv()
+
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS", "").split(",")))
 API_URL = "https://vkrdownloader.xyz/server/"
