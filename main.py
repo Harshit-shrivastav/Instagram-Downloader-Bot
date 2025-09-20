@@ -10,6 +10,7 @@ from aiogram import Bot, Dispatcher, F
 from aiogram.types import Message, BufferedInputFile
 from aiogram.filters import CommandStart, Command
 from aiogram.enums.parse_mode import ParseMode
+from aiogram.client.default import DefaultBotProperties
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -66,7 +67,7 @@ async def fetch_insta_media(link: str) -> dict | None:
     except Exception:
         return None
 
-bot = Bot(token=BOT_TOKEN, parse_mode=ParseMode.HTML)
+bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
 
 @dp.message(CommandStart())
